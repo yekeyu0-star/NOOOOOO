@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class playercontroller : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class playercontroller : MonoBehaviour
 
     void Update()
     {
+
+        transform.position = new Vector3(-6, transform.position.y, transform.position.z);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rigi2D.AddForce(transform.up * jumpforce);

@@ -6,18 +6,22 @@ public class thingmovetest : MonoBehaviour
 {
     public float bigthingsmove=1f;
 
-    Vector3 pos;
+    //Vector3 pos;
 
     private void Start()
     {
-        pos = transform.position;
+      //  pos = transform.position;
     }
     void Update()
     {
         transform.position +=   new Vector3(-bigthingsmove, 0,0) * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.R))
+        if (transform.position.x <-15)
+        {
+            Destroy(gameObject);
+        }
+      /*  if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = pos;
-        }
+        } */
     }
 }
